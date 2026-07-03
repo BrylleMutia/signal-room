@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A live, evidence-led 1–3 day crypto opportunity dashboard." />
+  <title>Signal Room — 72h Crypto Brief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Signal Room home">
+      <span class="brand-mark">SR</span>
+      <span>Signal Room</span>
+    </a>
+    <nav aria-label="Page sections">
+      <a href="#rankings">Rankings</a>
+      <a href="#method">Method</a>
+      <a href="#sources">Sources</a>
+    </nav>
+    <div class="live-pill"><span></span><b id="liveState">CONNECTING</b></div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="eyebrow">01 / LIVE TACTICAL BRIEF</div>
+      <div class="hero-grid">
+        <div>
+          <h1>72-hour<br><em>signal room.</em></h1>
+          <p class="dek">Five liquid, non-meme crypto setups ranked by short-term risk-adjusted evidence. Data refreshes every three hours—never guessed, always timestamped.</p>
+        </div>
+        <div class="hero-side">
+          <div class="timestamp">
+            <span>LAST RETRIEVAL · ASIA/MANILA</span>
+            <strong id="retrievedAt">Connecting to live feeds…</strong>
+          </div>
+          <button id="refreshBtn" class="refresh">Refresh now <span>↻</span></button>
+          <p id="nextRefresh">Automatic refresh scheduled after a successful retrieval.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tape" aria-label="Market overview">
+      <div><span>BTC DOMINANCE</span><strong id="btcDom">—</strong><small id="domStatus">CoinGecko</small></div>
+      <div><span>BTC 24H</span><strong id="btcChange">—</strong><small>Binance spot</small></div>
+      <div><span>MARKET BIAS</span><strong id="marketBias">—</strong><small id="biasNote">Awaiting candles</small></div>
+      <div><span>24H LIQUIDATIONS</span><strong>Unavailable</strong><small>No reliable keyless feed</small></div>
+      <div><span>ROUND-TRIP FEE</span><strong>0.20%</strong><small>Estimated spot taker ×2</small></div>
+    </section>
+
+    <section class="section intro" id="rankings">
+      <div>
+        <div class="eyebrow">02 / RANKED OPPORTUNITIES</div>
+        <h2>Five ideas.<br>Hard exits.</h2>
+      </div>
+      <div class="risk-note">
+        <span>RISK NOTICE</span>
+        <p>Short-horizon crypto trading is extremely risky. These are conditional statistical setups, not promises or personalized financial advice. Slippage, gaps, outages, and liquidation cascades can exceed the stated stop.</p>
+      </div>
+    </section>
+
+    <section class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Rank / asset</th>
+            <th>Price</th>
+            <th>Entry</th>
+            <th>Take profit</th>
+            <th>Stop loss</th>
+            <th>Hold</th>
+            <th>Confidence</th>
+          </tr>
+        </thead>
+        <tbody id="rankBody">
+          <tr class="skeleton-row"><td colspan="7">Retrieving live order books, derivatives and multi-timeframe candles…</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="cards" class="cards" aria-live="polite"></section>
+
+    <section class="market-story">
+      <div class="eyebrow">03 / VERIFIED CONTEXT</div>
+      <div class="story-grid">
+        <article class="lead-story">
+          <span class="fact-label">VERIFIED FACT · JUL 03, 2026</span>
+          <h3>A short squeeze is powering the rebound—but sustained spot demand remains the key test.</h3>
+          <p>CoinDesk reported $440M in 24-hour forced closures, including $281M in shorts, as BTC approached $62K. ETH and SOL led majors. Treat this as context, not a live liquidation feed.</p>
+          <a href="https://www.coindesk.com/markets/2026/07/03/ether-and-solana-extend-gains-as-a-short-squeeze-lifts-bitcoin-toward-usd62-000" target="_blank" rel="noreferrer">Read the source ↗</a>
+        </article>
+        <article>
+          <span class="fact-label">VERIFIED FACT · JUL 03, 2026</span>
+          <h3>Macro pressure eased.</h3>
+          <p>Reuters-syndicated coverage linked the move above $61K to softer U.S. jobs data and renewed spot-BTC ETF inflows.</p>
+          <a href="https://ca.investing.com/news/cryptocurrency-news/bitcoin-holds-above-61k-set-for-weekly-rise-after-softer-us-jobs-data-4719530" target="_blank" rel="noreferrer">Reuters via Investing.com ↗</a>
+        </article>
+        <article>
+          <span class="opinion-label">EXPERT CLAIM · NOT VERIFIED FACT</span>
+          <h3>The rebound still sits close to structural danger.</h3>
+          <p>FxPro chief market analyst Alex Kuptsikevich called the sub-$60K consolidation “dangerous” for bulls and identified $40K as deeper support if the floor failed. The quote predates today’s rebound and is presented as opinion, not a forecast.</p>
+          <a href="https://www.coindesk.com/markets/2026/07/02/bitcoin-zooms-above-usd61-000-as-inflation-fears-soften" target="_blank" rel="noreferrer">CoinDesk source ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="method" id="method">
+      <div>
+        <div class="eyebrow">04 / METHOD & LIMITS</div>
+        <h2>Evidence before<br>excitement.</h2>
+      </div>
+      <div class="method-list">
+        <details open>
+          <summary><span>01</span> Universe & exclusions</summary>
+          <p>The model evaluates BTC, ETH, SOL, XRP, ADA, BNB, LINK, AVAX and LTC, then shows exactly five. All are established assets on major exchanges. Memecoins, stablecoins and thin listings are excluded. A $50M minimum Binance 24h quote volume is required.</p>
+        </details>
+        <details>
+          <summary><span>02</span> Technical score</summary>
+          <p>15m, 1h, 4h and 1d Binance candles feed EMA20/50 alignment, RSI(14), MACD(12,26,9), ATR(14), relative volume, recent support/resistance and breakout distance. More aligned timeframes score higher.</p>
+        </details>
+        <details>
+          <summary><span>03</span> Derivatives & book</summary>
+          <p>Binance USDⓈ-M funding and open interest are context inputs; top-20 spot-book bid/ask notional estimates immediate imbalance. Open-interest change and aggregate liquidations are explicitly shown as unavailable when no comparable keyless series exists.</p>
+        </details>
+        <details>
+          <summary><span>04</span> Trade math</summary>
+          <p>Targets and stops are volatility-aware and anchored to resistance/support. Displayed gain/loss includes an estimated 0.10% taker fee on entry and exit (0.20% round trip), but not slippage or tax. No order is placed by this site.</p>
+        </details>
+      </div>
+    </section>
+
+    <footer id="sources">
+      <div class="brand footer-brand"><span class="brand-mark">SR</span><span>Signal Room</span></div>
+      <div>
+        <span>LIVE DATA</span>
+        <a href="https://developers.binance.com/en/docs/products/spot/rest-api" target="_blank" rel="noreferrer">Binance Spot API ↗</a>
+        <a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api" target="_blank" rel="noreferrer">Binance Futures API ↗</a>
+        <a href="https://docs.coingecko.com/reference/crypto-global" target="_blank" rel="noreferrer">CoinGecko Global API ↗</a>
+      </div>
+      <div>
+        <span>DISCLOSURE</span>
+        <p>Research interface only.<br>Not investment advice.<br>Built for verification.</p>
+      </div>
+      <div class="footer-time">
+        <span>NEXT REFRESH</span>
+        <strong id="footerNext">—</strong>
+      </div>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
